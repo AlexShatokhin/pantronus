@@ -25,8 +25,8 @@ export function initAccordion() {
 
   	accordionItems.forEach(item => {
 		const question = item.querySelector('.question');
-		question.addEventListener('click', () => {
-			toggleAccordion(item);
-		});
+		const arrow = item.querySelector('.arrow');
+		question.addEventListener('click', () => toggleAccordion(item));
+		arrow.addEventListener('click', () => toggleAccordion(item));
   	});
 }
