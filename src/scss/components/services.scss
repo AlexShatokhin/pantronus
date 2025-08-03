@@ -12,7 +12,7 @@
     }
     &-card{
         width: 490px;
-        height: 550px;
+        min-height: 550px;
         border-radius: 10px;
         padding: 25px 30px 35px 30px;
         background-color: $light-color;
@@ -43,6 +43,7 @@
                     width: 20px;
                     height: 20px;
                     border-radius: 50%;
+                    flex-shrink: 0;
                     background-color: $secondary-color;
                 }
             }

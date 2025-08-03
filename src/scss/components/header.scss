@@ -2,7 +2,8 @@
 
 header {
     width: 100%;
-    min-height: 800px;
+    min-height: 100vh;
+    padding-bottom: 80px;
     overflow: hidden;
     background: url("/src/assets/images/background_header.jpg") center center/cover no-repeat;
 }
@@ -93,7 +94,7 @@ header {
         &__buttons-wrapper{
             margin: 0 auto;
             margin-top: 60px;
-            width: 700px;
+            width: 750px;
             display: flex;
             justify-content: center;
             column-gap: 30px;
@@ -102,7 +103,7 @@ header {
         }
     }
     &-button{
-        width: 320px;
+        width: 340px;
         height: 50px;
         background-color: transparent;
         border: 1px solid $main-color;
