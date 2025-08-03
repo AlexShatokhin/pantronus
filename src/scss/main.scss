@@ -10,12 +10,23 @@
 @use "./components/faq.scss";
 @use "./components/contacts.scss";
 
+:root {
+   --app-height: 100%;
+}
+
 * {
     font-family: "Noto Serif TC", serif;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
     box-sizing: border-box;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    height: var(--app-height);
 }
 
 .container {
