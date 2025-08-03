@@ -26,6 +26,7 @@
         .question{
             font-weight: 600;
             font-size: 32px;
+            padding-right: 55px;
             cursor: pointer;
         }
         .answer{
@@ -53,6 +54,14 @@
                     font-size: 22px;
                 }
             }
+            .accordion-list__item_english {
+                .question {
+                    font-size: 20px;
+                }
+                .answer {
+                    font-size: 16px;
+                }
+            }
         }
     } 
 }
@@ -61,10 +70,7 @@
     .faq {
         height: 530px;
         .accordion-list {
-            .arrow{
-                right: 10px;
-                font-size: 20px;
-            }
+
             &__item {
                 .question {
                     font-size: 24px;
@@ -72,6 +78,20 @@
                 .answer {
                     font-size: 18px;
                 }
+
+            }
+            .accordion-list__item_english {
+                .question {
+                    font-size: 16px;
+                    padding-right: 40px;
+                }
+                .answer {
+                    font-size: 14px;
+                }
+            }
+            .arrow{
+                right: 10px;
+                font-size: 20px;
             }
         }
     } 
@@ -81,6 +101,7 @@
 @media screen and (max-width: 400px) {
     .faq {
         .accordion-list {
+            row-gap: 40px;
             .arrow{
                 right: 5px;
                 font-size: 20px;
