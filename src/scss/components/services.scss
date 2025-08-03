@@ -1,0 +1,162 @@
+@use "/src/scss/base/variables" as *;
+
+.services{
+    min-height: 600px;
+    width: 100%;
+    background-color: $dark-color;
+    &__wrapper{
+        display: flex;
+        justify-content: center;
+        column-gap: 100px;
+        padding-bottom: 50px;
+    }
+    &-card{
+        width: 490px;
+        height: 550px;
+        border-radius: 10px;
+        padding: 25px 30px 35px 30px;
+        background-color: $light-color;
+        &__title{
+            color: $main-color;
+            font-weight: 600;
+            font-size: 35px;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+        &__list{
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            row-gap: 40px;
+            width: 400px;
+            margin: 0 auto;
+            &-item{
+                color: $secondary-color;
+                font-weight: 400;
+                font-size: 28px;
+                line-height: 33px;
+                display: flex;
+                align-items: center;
+                column-gap: 20px;
+                .circle{
+                    display: block;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    background-color: $secondary-color;
+                }
+            }
+        }
+            
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .services {
+        min-height: 750px;
+        &-card {
+            width: 480px;
+            &__title{
+                margin-bottom: 40px;
+            }
+            &__list{
+                row-gap: 30px;
+            }
+        }        
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    .services {
+        min-height: 680px;
+        &__wrapper {
+            column-gap: 20px;
+            // flex-direction: column;
+            align-items: center;
+            row-gap: 30px;
+        }
+        &-card {
+            width: 350px;
+            height: 450px;
+            &__title{
+                font-size: 32px;
+            }
+            &__list{
+                row-gap: 35px;
+                width: 100%;
+                &-item{
+                    font-size: 21px;
+                    line-height: 23px;
+                    column-gap: 15px;
+                    .circle{
+                        width: 10px;
+                        height: 10px;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    .services {
+        min-height: 500px;
+        &-card {
+            width: 100%;
+            height: 380px;
+            padding: 20px 15px 30px 15px;
+            &__title{
+                font-size: 28px;
+                margin-bottom: 30px;
+            }
+            &__list{
+                width: 100%;
+                row-gap: 20px;
+                &-item{
+                    font-size: 18px;
+                    line-height: 24px;
+                    column-gap: 7px;
+                    .circle{
+                        width: 7px;
+                        height: 7px;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width: 575px) {
+    .services {
+        &__wrapper {
+            flex-direction: column;
+            align-items: center;
+            row-gap: 20px;
+        }
+        &-card {
+            width: 100%;
+            height: auto;
+            padding: 20px;
+            &__title{
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+            &__list{
+                width: 100%;
+                row-gap: 15px;
+                &-item{
+                    font-size: 16px;
+                    line-height: 20px;
+                    column-gap: 10px;
+                    .circle{
+                        width: 8px;
+                        height: 8px;
+                    }
+                }
+            }
+        }
+    }
+    
+}

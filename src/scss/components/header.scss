@@ -1,0 +1,217 @@
+@use "/src/scss/base/variables" as *;
+
+header {
+    width: 100%;
+    min-height: 100vh;
+    background: url("/src/assets/images/background_header.jpg") center center/cover no-repeat;
+}
+
+.header{
+    .burger{
+        display: none;
+    }
+    &-navigation{
+        padding-top: 50px;
+        &__list{
+            display: flex;
+            justify-content: space-between;
+            list-style-type: none;
+            &-item{
+                a {
+                    color: $light-color;
+                    font-size: 24px;
+                    font-weight: 500;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    &-content{
+        margin-top: 170px;
+    }
+    &-wrapper{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &-information{
+        width: 700px;
+        &__title{
+            color: $light-color;
+            font-size: 47px;
+            line-height: 55px;
+            font-weight: 600;
+            text-align: center;
+        }
+        &__subtitle{
+            color: $light-color;
+            font-size: 27px;
+            line-height: 35px;
+            font-weight: 400;
+            margin-top: 20px;
+            text-align: center;
+        }
+        &__buttons-wrapper{
+            margin: 0 auto;
+            margin-top: 60px;
+            width: 700px;
+            display: flex;
+            justify-content: center;
+            column-gap: 30px;
+            row-gap: 25px;
+            flex-wrap: wrap;
+        }
+    }
+    &-button{
+        width: 320px;
+        height: 50px;
+        background-color: transparent;
+        border: 1px solid $main-color;
+        border-radius: 10px;
+        color: $light-color;
+        font-size: 22px;
+        font-weight: 400;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .header {
+        &-wrapper{
+            column-gap: 30px;
+        }
+        &-navigation {
+            padding-top: 40px;
+            &__list {
+                &-item {
+                    a {
+                        font-size: 21px;
+                    }
+                }
+            }
+        }
+        &-content{
+            margin-top: 100px;
+        }
+        &-information {
+            width: 650px;
+            &__title{
+                font-size: 40px;
+            }
+            &__subtitle{
+                font-size: 22px;
+                margin-top: 10px;
+            }
+            &__buttons-wrapper {
+                width: 530px;
+                margin-top: 30px;
+            }
+        }
+        &-button {
+            width: 240px;
+            height: 40px;
+            font-size: 19px;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 1140px) {
+    .header {
+        &-content{
+            margin-top: 50px;
+        }
+        &-information {
+            width: 100%;
+            &__title{
+                font-size: 37px;
+                line-height: 36px;
+                margin-bottom: 0;
+            }
+            &__subtitle{
+                font-size: 22px;
+            }
+            &__buttons-wrapper {
+                row-gap: 10px;
+            }
+        }
+        &-button {
+            height: 45px;
+            font-size: 18px;
+        }
+        &-logo{
+            width: 400px;
+        }
+        &-wrapper{
+            flex-direction: column-reverse;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        position: relative;
+        &-logo{
+            width: 270px;
+        }
+        &-information {
+            &__title{
+                font-size: 27px;
+                line-height: 32px;
+            }
+            &__subtitle{
+                font-size: 17px;
+                line-height: 22px;
+            }
+            &__buttons-wrapper {
+                width: 100%;
+                flex-direction: column;
+                row-gap: 15px;
+                align-items: center;
+                margin-top: 40px;
+            }
+        }
+        &-button {
+            width: 400px;
+            height: 40px;
+        }
+        &-navigation{
+            &__list{
+                display: none;
+            }
+            .burger{
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                z-index: 1000;
+                cursor: pointer;
+                span{
+                    display: block;
+                    width: 30px;
+                    height: 3px;
+                    background-color: $light-color;
+                    margin: 6px 0;
+                }
+            }
+        }
+    }   
+}
+
+@media screen and (max-width: 430px) {
+    .header {
+        &-information {
+            &__title{
+                font-size: 21px;
+            }
+            &__subtitle{
+                font-size: 16px;
+            }
+        }
+        &-button{
+            width: 100%;
+        }
+    }
+    
+}

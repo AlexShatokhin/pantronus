@@ -1,0 +1,97 @@
+@use "/src/scss/base/variables" as *;
+
+.faq{
+    height: 600px;
+    color: $light-color;
+}
+
+.accordion-list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    &__item{
+        color: $secondary-color;
+        border-bottom: 2px solid $main-color;
+        position: relative;
+        overflow: hidden;
+        .arrow{
+            position: absolute;
+            right: 30px;
+            top: 0px;
+            font-size: 30px;
+            color: $main-color;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        .question{
+            font-weight: 600;
+            font-size: 32px;
+            cursor: pointer;
+        }
+        .answer{
+            font-size: 24px;
+            font-weight: 400;
+            padding-top: 20px;
+            height: 0;
+            transition: .3s all;
+        }
+    }
+    .arrow-open{
+        transform: rotate(180deg);
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .faq {
+        .accordion-list {
+            &__item {
+                .question {
+                    font-size: 28px;
+                }
+                .answer {
+                    font-size: 22px;
+                }
+            }
+        }
+    } 
+}
+
+@media screen and (max-width: 525px) {
+    .faq {
+        .accordion-list {
+            .arrow{
+                right: 10px;
+                font-size: 20px;
+            }
+            &__item {
+                .question {
+                    font-size: 24px;
+                }
+                .answer {
+                    font-size: 18px;
+                }
+            }
+        }
+    } 
+}
+
+
+@media screen and (max-width: 400px) {
+    .faq {
+        .accordion-list {
+            .arrow{
+                right: 5px;
+                font-size: 20px;
+            }
+            &__item {
+                .question {
+                    font-size: 20px;
+                }
+                .answer {
+                    font-size: 18px;
+                }
+            }
+        }
+    } 
+}

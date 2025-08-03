@@ -1,0 +1,61 @@
+@use "/src/scss/base/variables" as *;
+.about{
+    width: 50%;
+    background-color: $light-color;
+    &-text{
+        color: $secondary-color;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 37px;
+        text-align: center;
+        width: 550px;
+        margin: 80px auto;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .about {
+        &-text{
+            margin: 70px auto;
+            width: 500px;
+            font-size: 27px;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 1140px) {
+    .about {
+        &-text{
+            width: 400px;
+            font-size: 20px;
+            line-height: 25px;
+            margin: 60px auto;
+        }
+    }   
+}
+
+@media screen and (max-width: 768px) {
+    .about {
+        width: 100%;
+        &-text{
+            width: 400px;
+            font-size: 18px;
+            line-height: 22px;
+            margin: 50px auto;
+        }
+    }
+    
+}
+
+@media screen and (max-width: 400px) {
+    .about {
+        &-text{
+            width: 320px;
+            font-size: 17px;
+            line-height: 20px;
+            margin: 40px auto;
+        }
+    }
+    
+}

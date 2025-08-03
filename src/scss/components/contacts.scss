@@ -1,0 +1,76 @@
+@use "/src/scss/base/variables" as *;
+
+.contacts{
+    background-color: $dark-color;
+    height: 500px;
+    width: 100%;
+    &__wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        column-gap: 70px;
+    }
+    &__information{
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        &-item{
+            color: $light-color;
+            font-size: 30px;
+            font-weight: 400;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .contacts {
+        height: 400px;
+        &__wrapper {
+            row-gap: 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 1140px) {
+    .contacts {
+        &__information {
+            &-item {
+                font-size: 27px;
+            }
+        }
+        &__image{
+            width: 200px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contacts {
+        height: 100%;
+        &__wrapper {
+            flex-direction: column;
+            row-gap: 30px;
+            padding-bottom: 30px;
+        }
+        &__information {
+            row-gap: 10px;
+            &-item {
+                text-align: center;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .contacts {
+        &__information {
+            &-item {
+                font-size: 18px;
+            }
+        }
+    }
+    
+}

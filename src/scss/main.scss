@@ -1,0 +1,57 @@
+@use "./base/mixins";
+@use "./base/variables";
+@use "./base/normalize";
+@use "./fontello.scss";
+
+@use "./components/header.scss";
+@use "./components/about.scss";
+@use "./components/moldova.scss";
+@use "./components/services.scss";
+@use "./components/faq.scss";
+@use "./components/contacts.scss";
+
+* {
+    font-family: "Noto Serif TC", serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.sections-wrapper{
+    min-height: 500px;
+    display: flex;
+}
+
+@media (max-width: 1500px) {
+    .container {
+        width: 100%;
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 1140px) {
+    .container {
+        width: 100%;
+        padding: 0 30px;
+    }
+    .sections-wrapper {
+        min-height: 380px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0 20px;
+    }
+    .sections-wrapper {
+        width: 100%;
+        flex-direction: column;
+    }
+}
