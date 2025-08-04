@@ -50,6 +50,9 @@ header {
 
 
 .header{
+    &-logo{
+        width: 550px;
+    }
     &-navigation{
         padding-top: 50px;
         &__list{
@@ -208,7 +211,7 @@ header {
     .header {
         position: relative;
         &-logo{
-            width: 270px;
+            width: 500px;
         }
         &-information {
             &__title{
@@ -266,6 +269,14 @@ header {
         display: block;
     }
 
+}
+
+@media screen and (max-width: 550px) {
+    .header {
+        &-logo{
+            width: 90%;
+        }
+    }
 }
 
 @media screen and (max-width: 430px) {
